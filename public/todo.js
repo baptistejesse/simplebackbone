@@ -1,5 +1,5 @@
 $(function(){
-var AboutMe  = Backbone.Model.extend({
+window.AboutMe  = Backbone.Model.extend({
  firebase: new Backbone.Firebase("https://hellospotty.firebaseio.com")	
 	
 	
@@ -10,7 +10,7 @@ var AboutMe  = Backbone.Model.extend({
 });	
 	
 	
-var aboutme = new AboutMe;	
+	
 	
 	
 	
