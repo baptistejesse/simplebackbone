@@ -43,9 +43,17 @@ window.AboutView = Backbone.View.extend({
 
 window.ContactView = Backbone.View.extend({
 
-	render: function()	{
+	
 
+	render: function()	{
+		
+		
 	this.$el.append($("#Contactview").html());	
+	
+	
+	
+	
+	
 	return this;	
 
 
@@ -60,15 +68,32 @@ window.ContactView = Backbone.View.extend({
 
 window.NewsView = Backbone.View.extend({
 	
+	initialize: function(){
+		
+	this.mappy();	
+		
+		
+	},
+	
+	
+	
+	
 	
 	render: function()	{
-
+   		var	url = GMaps.staticMapURL({
+			  size: [610, 300],
+			  lat: -12.043333,
+			  lng: -77.028333,
+			  markers: [
+			    {lat: -12.043333, lng: -77.028333}] });
+		var img = $('<img/>').attr('src', url);	
 	this.$el.append($("#Newsview").html());	
+     this.$("#map").append(img)
+
 	return this;	
 
 
-	}	
-	
+	}
 	
 	
 });
@@ -97,7 +122,7 @@ $("#hello").append(index.render().el);
 	
 	
 bam: function()	{
-alert("about");	
+
 var about = new AboutView();	
 $("#hello").empty();	
 $("#hello").append(about.render().el);	
@@ -109,7 +134,7 @@ $("#hello").append(about.render().el);
 },
 
 contact: function()	{
-alert("contact");	
+	
 var contact = new ContactView();	
 $("#hello").empty();	
 $("#hello").append(contact.render().el);	
@@ -120,7 +145,7 @@ $("#hello").append(contact.render().el);
 },
 
 news: function()	{
-alert("news");	
+	
 var news = new NewsView();	
 $("#hello").empty();	
 $("#hello").append(news.render().el);	
@@ -131,7 +156,7 @@ $("#hello").append(news.render().el);
 },
 
 info: function()	{
-alert("info");	
+
 	
 var info = new InfoView();	
 $("#hello").empty();	
