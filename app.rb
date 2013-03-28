@@ -3,11 +3,10 @@ require 'sinatra'
 
 
 
+get '/*' do
+  
+  
 
-get '/' do
-  
-  
-"hello"  
   
  erb :home 
   
