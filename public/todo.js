@@ -46,14 +46,17 @@ window.ContactView = Backbone.View.extend({
 	
 
 	render: function()	{
-		
-		
+			/*var	url = GMaps.staticMapURL({
+				  size: [610, 300],
+				  lat: -12.043333,
+				  lng: -77.028333,
+				  markers: [
+				    {lat: -12.043333, lng: -77.028333}] });
+			var img = $('<img/>').attr('src', url);	
+		*/
 	this.$el.append($("#Contactview").html());	
-	
-	
-	
-	
-	
+	 //this.$("#map").append(img)
+
 	return this;	
 
 
@@ -68,27 +71,15 @@ window.ContactView = Backbone.View.extend({
 
 window.NewsView = Backbone.View.extend({
 	
-	initialize: function(){
-		
-	this.mappy();	
-		
-		
-	},
-	
+
 	
 	
 	
 	
 	render: function()	{
-   		var	url = GMaps.staticMapURL({
-			  size: [610, 300],
-			  lat: -12.043333,
-			  lng: -77.028333,
-			  markers: [
-			    {lat: -12.043333, lng: -77.028333}] });
-		var img = $('<img/>').attr('src', url);	
+   	
 	this.$el.append($("#Newsview").html());	
-     this.$("#map").append(img)
+    
 
 	return this;	
 
