@@ -5,9 +5,19 @@ window.AboutMe  = Backbone.Model.extend({
 	
 });	
 	
+window.Emails  = Backbone.Model.extend({
+ firebase: new Backbone.Firebase("https://hellospotty.firebaseio.com/emails")	
+	
+	
+});
 	
 window.IndexView = Backbone.View.extend({
 	className: "row",
+	
+	events:{
+	"click #emails": "show"	,
+	"click #submit"	: "submit"
+	},
 
 	render: function()	{
 
@@ -15,6 +25,28 @@ window.IndexView = Backbone.View.extend({
 	return this;	
 
 
+	},
+	
+	show: function(){
+	this.$("#namer").val("");
+	this.$("#emailer").val("");
+	this.$(".callout.panel").toggle();	
+		
+		
+		
+	},
+	
+	submit: function(){
+	
+	
+	var emails = new Emails();
+	emails.set({
+	email:this.$("#emailer").val(),
+	username: this.$("#namer").val()	
+	});	
+	emails.save()
+		
+	this.$(".callout.panel").hide()	
 	}	
 	
 	
