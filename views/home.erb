@@ -19,20 +19,6 @@
  <script src="backfire.js"></script>
   <script src="todo.js"></script>
 
- <script type="text/javascript">
-map = new GMaps({
-  div: '#map',
-  zoom: 16,
-  lat: -12.043333,
-  lng: -77.028333,
-  click: function(e) {
-    alert('click');
-  },
-  dragend: function(e) {
-    alert('dragend');
-  }
-});	 
-</script>
 
 <script type="text/template" id="Indexview">
 
@@ -76,7 +62,14 @@ map = new GMaps({
 </div>
 </div>
 <div class="large-5 columns">
-<p>Contact </p>
+<h2 style="text-align:center;">Contact </h2>
+<ul style=" display:block;margin:0 auto;" class="vcard">
+<li class="fn">Active Academics Inc</li>
+<li class="phone">(516) 304-1234</li>
+<li class="street-address">348 Cochran Place</li>
+<li class="locality">Valley Stream, NY , <span class="zip">11581</span></li>
+<li class="email"><a href="#">activeacademicsinc@gmail.com</a></li>
+</ul>
 </div>
 
 
@@ -90,11 +83,33 @@ map = new GMaps({
 </div>
 </div>
 <div class="large-5 columns">
-<p>About </p>
+<div>
+<div class="callout panel">
+ <h3>Sports <small>click me </small></h3>
 </div>
-
-
-
+<p style="display:none;">Active Academics offers a unique variety of sports and fitness. Children enjoy playing basketball and soccer.  Each day students experience one hour of fitness where they learn about the importance of physical activity in their daily life.</p>
+</div>
+<div>
+<div class="callout panel">
+ <h3>Science <small>click me </small></h3>
+</div>
+<p style="display:none;"> Science at Active Academics is an exciting time where students take part in enriching science experiments. Get ready for explosions, hands on learning, and amusement! </p>
+</div>
+<div>
+<div class="callout panel">
+ <h3>Arts And Crafts <small>click me </small></h3>
+</div>
+<p style="display:none;">Arts and Crafts at Active Academics enables your child to learn about different artists. Children will learn how paint, draw, and create like their favorite artists. Get ready for your child’s art work to be hanging in a museum someday!</p>
+</div>
+<div>
+<div class="callout panel">
+ <h3>Nutrition <small>click me </small></h3>
+</div>
+<p style="display:none;">Children at Active Academics get to enjoy creating delicious and healthy meals. During cooking students are able to practice learning measurement, fractions, adding, subtraction, portion control and so much more. You may be surprised enjoy a scrumptious and healthy entre cooked entirely by your child!
+With childhood obesity rates climbing, we are purposing ourselves to teach your child to be healthy and active!</p>
+<p style="display:none;">We encourage all students to enjoy the outdoors! Children at Active Academics Inc. enjoy playing outside and walking to our nearby park!</p>
+</div>
+</div>
 </script>
 
 </head> 

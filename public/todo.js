@@ -24,7 +24,10 @@ window.IndexView = Backbone.View.extend({
 
 
 window.AboutView = Backbone.View.extend({
-	
+	events: {
+	"click .callout": "pops"
+		
+	},
 	
 	render: function()	{
 
@@ -32,6 +35,13 @@ window.AboutView = Backbone.View.extend({
 	return this;	
 
 
+	},
+	
+	pops: function(event){
+	
+	   $(event.currentTarget).siblings().toggle();	
+		
+		
 	}	
 	
 	
@@ -46,16 +56,16 @@ window.ContactView = Backbone.View.extend({
 	
 
 	render: function()	{
-			/*var	url = GMaps.staticMapURL({
+			var	url = GMaps.staticMapURL({
 				  size: [610, 300],
-				  lat: -12.043333,
-				  lng: -77.028333,
+				  lat: 40.648148,
+				  lng: -73.702670,
 				  markers: [
-				    {lat: -12.043333, lng: -77.028333}] });
+				    {lat: 40.648148, lng: -73.702670}] });
 			var img = $('<img/>').attr('src', url);	
-		*/
+		
 	this.$el.append($("#Contactview").html());	
-	 //this.$("#map").append(img)
+	this.$("#map").append(img)
 
 	return this;	
 
